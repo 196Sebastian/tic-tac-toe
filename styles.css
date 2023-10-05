@@ -74,8 +74,8 @@ body {
 
 .cell.x::before,
 .cell.x::after,
-.board-x .cell:not(.x):not(.circle):hover::after,
-.board-x .cell:not(.x):not(.circle):hover::before {
+.board-x .cell:not(.x):not(.circle):hover::before,
+.board-x .cell:not(.x):not(.circle):hover::after {
   content: '';
   position: absolute;
   width: calc(var(--mark-size) * .10);
@@ -130,7 +130,7 @@ body {
 }
 
 .game-status button {
-  font-size: 3rm;
+  font-size: 3rem;
   background-color: white;
   border: 1px solid black;
   padding: .25em .5em;
