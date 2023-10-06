@@ -11,14 +11,18 @@ h2 {
   background-color: gray;
 }
 
+.player-points-section h1,
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .player-points-section h1 {
   font-size: 35px;
-  font-family: 'Courier New', Courier, monospace;
+
 }
 
 .player-points-section h2 {
   font-size: 22px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .player-one h1 {
