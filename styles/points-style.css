@@ -1,6 +1,30 @@
-.player-points-section {
+.player-points-section,
+h2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: lightblue;
+}
+
+.player-points-section {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: gray;
+}
+
+.player-points-section h1 {
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.player-points-section h2 {
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.player-one h1 {
+  color: blue;
+}
+
+.player-two h1 {
+  color: red;
 }
