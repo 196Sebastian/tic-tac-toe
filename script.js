@@ -18,11 +18,19 @@ const board = document.getElementById("board");
 const restartButton = document.getElementById("restart-button");
 const gameMessage = document.getElementById("game-message");
 
+const playerPoints = document.querySelectorAll("h2");
+
 let circleTurn;
+let xPlayerPoints = 0;
+let circlePlayerPoints = 0;
 
 startGame();
 
-restartButton.addEventListener("click", startGame);
+
+restartButton.addEventListener("click", () => {
+  startGame();
+
+});
 
 function startGame() {
   circleTurn = false;
@@ -64,15 +72,15 @@ function endGame(draw) {
     winningTextElement.innerHTML = "It's a DRAW!"
   } else {
     winningTextElement.innerHTML = `${circleTurn ? "O's" : "X's"} Wins!`
+    keepScore(circleTurn);
   }
   gameMessage.classList.add("show");
 }
 
 function placeMarck(cell, currentClass) {
   cell.classList.add(currentClass);
+  console.log(currentClass);
 }
-
-function swapTurns() { circleTurn = !circleTurn; }
 
 function setBoardHoverClass() {
   board.classList.remove(X_CLASS);
@@ -91,4 +99,16 @@ function checkWin(currentClass) {
       return cellElements[index].classList.contains(currentClass);
     })
   })
+}
+
+function swapTurns() { circleTurn = !circleTurn; }
+
+function keepScore(circleTurn) {
+  if (!circleTurn) {
+    xPlayerPoints++;
+    playerPoints[0].innerHTML = `${xPlayerPoints} POINTS`
+  } else {
+    circlePlayerPoints++;
+    playerPoints[1].innerHTML = `${circlePlayerPoints} POINTS`
+  }
 }
